@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        
+            body{
+                background-image: url(Images\ Rinjani/Rinjani1.jpg);
+            }
+            .BackgroundShade {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.1);
+            
+            }
+            .TopBar{
+                width: 100vw;
+                position: fixed;
+                height: 60px;
+                row-gap: 20px;     
+                background-color:rgba(255, 255, 255, 0.8);
+                z-index: 3; 
+                transition: 1s;
+            }
+            .Logo{
+                width: 40px;
+                height: 40px;
+                background-image: url(LogoQuadrato1.png);
+                background-size: contain;
+                left: 30px;
+                position: absolute;
+                flex-shrink: 0;
+            }
+            .BottomBar>.Logo{
+                width: 60px;
+                height: 60px;
+            }
+            .Block{
+                transition: 0.5s;
+                border-radius: 5px;
+                
+            }
+            .Background.Image{
+               
+                width: fit-content;
+                border-radius: 5px;
+                transition: 0.5s;
+                background-size: 150vw;
+            }
+            .Background.Image.Rinjani{
+                background-image: url(Images\ Rinjani/RinjaniStelle1.jpg);
+            }
+            .Background.Image.SoftTrek{
+                background-image: url(Images\ SoftTrek/Risaie.jpg);
+            }
+            .Background.Image.Surroundings{
+                background-image: url(BackgroundBamboo.jpg);
+            }
+            .Background.Image.AboutSection{
+                background-image: url(BackgroundAbout2.jpg);
+            }
+            .MainContent{
+                padding-top: 0px !important;
+            }
+            
+            .Hero.Image {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-image: url(YusufPointingCropped.jpg);
+                background-size: cover;
+                background-position: right center;
+                background-attachment: fixed;
+                padding-top: 60px;
+                height: calc(100vh - 60px);
+                width: 100vw;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px -5px 20px 5px;
+
+            }
+            .Hero.Title {
+                /*height: calc(100vh - 60px);*/
+                font-size: 40px;
+                
+                text-align: center;
+                position: relative;
+                bottom: 100px;
+                word-wrap: break-word;
+            }            
+            .Hero.Text {
+                /*height: 70vh;*/
+                width: 400px;
+                padding: 0px;
+                text-align: center;
+                position: relative;
+                bottom: 100px;
+            }
+            .Discover{
+                height: 100px;
+                POSITION: RELATIVE;
+                /* TOP: -25PX; */
+                /* BACKGROUND-COLOR: WHITE; */
+                /* align-content: center; */
+                /* text-align: center; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(255,255,255,0.8);
+                /* padding-bottom: 30px; */
+                font-family: "Source Sans 3";
+                font-size: 1.75rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                width: 100vw;
+            }
+            .Body{
+                color: #000;
+                font-family: Montserrat;
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            .InfoPrice{
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                align-items: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                gap: 10px;
+
+                width: 65%;                
+            }
+            .Credits{
+                display: flex;
+                flex-direction: column;
+                width: 35%;
+                gap: 5px;
+                font-family: "Source Sans 3";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 600;
+                height: 118px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                align-items: center;
+            }
+            .CreditLine{
+                font-family: "Montserrat";
+                font-size: 0.875rem;
+                
+                font-weight: 300;
+                
+                left: 10px;
+                position: relative;
+            }
+            .InfoHeader{
+                color: #000;
+                text-align: center;
+                font-family: "Source Sans 3";
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+            .Days{
+                display: flex;
+                font-family: "Source Sans 3";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                gap: 25px;
+                justify-content: flex-start;
+                width: 100%;
+                padding-left: 15px;
+                
+            }
+            .Price{
+                font-family: "Source Sans 3";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 600;
+            }
+            .Text{
+                /*text-align: center;*/
+                font-family: "Montserrat";
+                font-size: 1rem;
+                font-weight: 400;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .ContactLine{
+                display: flex;
+                gap: 20px;
+                
+            }
+            .Contact{
+                overflow-wrap: anywhere;
+                font-family: "Montserrat";
+                font-size: 0.875rem;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+            }
+            .BoldText{
+                font-family: "Montserrat";
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+            .Line{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                align-items: flex-end;
+                width: calc(45vw - 20px);
+            }
+            .First.Line{
+                font-family: "Montserrat";
+                font-size: 1rem;
+                font-weight: 300;
+                text-align: end;
+            }
+            .Second.Line{
+                align-items: flex-start;
+                font-family: "Montserrat";
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: start;
+            }
+            .StraightLine{
+                width: 86vw;
+                height: 1px;
+                background-color: rgb(155, 155, 155);
+            }
+            .ContactsHeader{
+                font-family: "Source Sans 3";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 600;
+            }
+            .TopBarButton:active {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+            .BottomBar{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+
+
+
+
+            @media only screen and (max-width: 859px){
+            .Hero.Content{
+                background-color: rgba(255, 255, 255, 1);
+            }
+            .Hero.Image{
+                animation: Slide 4s cubic-bezier(0.63, 0.01, 0.35, 0.99);
+                background-position: right -50px top 0px;
+            }
+            .Hero.Title{
+                font-size: 1.75rem;
+                text-align: center;
+                animation: Text 4s ease-out;
+                top: -100px;
+            }
+            .Hero.Text{
+                text-align: center;
+                animation: Body 4s ease-out;
+                top: -100px;
+                
+            }
+            @keyframes Slide {
+                0%{
+                    background-position: left 0px top 0px;
+                    
+                }
+                25%{
+                    background-position: left 0px top 0px;
+                    
+                }
+                100%{
+                    background-position: right -50px top 0px;
+                    opacity: 100%;
+                }
+            }
+            @keyframes Text {
+                0% {
+                    opacity: 0;
+                    top: 10vh;
+                    position: relative;
+                }
+                66.66666% {
+                    opacity: 0;
+                    top: 10vh;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    
+                    position: relative;
+                }
+                
+            }
+            @keyframes Body {
+                0% {
+                    opacity: 0;
+                    top: 3vh;
+                    position: relative;
+                }
+                80% {
+                    opacity: 0;
+                    top: 3vh;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    
+                    position: relative;
+                }
+                
+            }
+            body{
+                background-size: 1000px 1000px;
+                background-position: 0px -150px;
+                background-repeat: no-repeat;                                    
+            }
+            .TopBar{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .Logo{
+                left: 30px;
+                top: 0px;
+                position: fixed;
+            }
+            .TopBarButtonContainer{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: absolute;
+                top: -250px;
+                justify-content: space-around;
+                transition: 1s;
+            }
+            .MobileTopBarMenuButton{
+                pointer-events:none;
+                
+                position: fixed;
+                /*width: 100vw;*/
+                display: flex;
+                justify-content: center;
+                transition: 0.3s;
+                gap: 15px;
+                color: #222222;
+            }
+            .MobileTopBarMenuButtonText{
+                font-size: 1.25rem;
+                font-family: 'Source Sans 3';
+                font-weight: 400;
+            }
+            .TopBar:focus-within .TopBarButtonContainer{
+                top: 21px;
+                display: flex;
+                position: absolute;
+            }
+            .TopBar:focus-within .MobileTopBarMenuButton{
+                opacity: 0;
+                position: absolute;
+               
+            }
+            .TopBar:focus-within {
+                height: 200px;
+                background-color:rgba(255, 255, 255, 0.9);
+            }
+            .TopBarButton {
+                width: 200px;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                justify-content: center;
+                font-size: 1.125rem;
+                font-family: 'Source Sans 3'; 
+                font-weight: 400;          
+                transition: 1s;
+                border-radius: 8px;
+            }
+            
+            
+            
+            .Frame2{
+                display: flex;
+                
+                position: relative;
+                left: 10px;
+                padding: 25px 0px 0px 0px;
+                /*flex-direction: column;*/
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 25px; 
+                overflow-y: hidden;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                width: calc(100vw - 25px*2);
+                
+                
+                z-index: 2;
+            }
+            
+            .Block:active {
+                background-color: rgba(255, 255, 255, 0.3)  !important ;
+                box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.3); 
+                
+            }
+            .Background.Image{
+                background-size: 125vh;
+                transition: 0.5s;
+
+            }
+            .Background.Image.Rinjani{
+                background-image: url(Images\ Rinjani/RinjaniStelle1Vertical.jpg);
+            }
+            .Background.Image.SoftTrek{
+                background-image: url(Images\ SoftTrek/RisaieVerticale.jpg);
+            }
+            .Background.Image.Surroundings{
+                background-image: url(BackgroundBambooVertical.jpg);
+            }
+            .Background.Image.AboutSection{
+                background-image: url(BackgroundAbout2Vertical.jpg);
+            }
+            .Background.Image:active{               
+                
+                background-size: 100vh;
+            }
+            
+            .Rectangle1{
+                display: none;
+            }
+            .ImageContainer{
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                width: calc(100vw - 20px);
+                height: calc(66vw - 20px);
+                border-radius: 5px 5px 0px 0px;
+            }
+            .ImageContainer.Rinjani{
+                background-image: url(Images\ Rinjani/RinjaniTende1.jpg);
+            }
+            .ImageContainer.SoftTrek{
+                background-image: url(Images\ SoftTrek/TetebatuBlackMonkey2.jpg);
+            }
+            .ImageContainer.Surroundings{
+                background-image: url(Images\ Surroundings/SurroundingsPottery.jpg);
+            }
+            .ImageContainer.About{
+                background-image: url(AboutSchiena.jpg);
+            }
+            .Mobile.Title{
+                background-color: rgba(255, 255, 255, 0.8);
+                width: calc(100vw - 20px);
+                position: relative;
+                bottom: 20px;
+                text-align: center;
+                font-size: 1.5rem;
+                padding-top: 4px;
+                padding-bottom: 4px;
+
+            }
+            
+            .DescriptionRinjaniTrek{
+                /*top: 75px;*/
+                left: 5px;
+                width: calc(100vw - 60px);
+                height: 0px;
+                
+                position: relative;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 25px;
+                
+                /*overflow-y: scroll;
+                overflow-x: hidden;*/
+                z-index: 2;
+                
+                
+            }
+            .Title{
+                font-family: "Source Sans 3";
+                font-size: 1.75rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal; 
+                justify-content: center;
+                display: flex;
+                          
+                
+            }
+            .Title.Desktop{
+                display: none;
+            }
+            .Body{
+                padding-top: 0px;
+            }
+            .Block{
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                padding-right: 25px;
+                
+                width: calc(100vw - 20px - 25px - 25px); /*outer space + internal padding*/
+                background-color: rgba(255, 255, 255, 0.8); 
+                gap: 25px;  
+                align-items: center;             
+            }
+            .MainContent{
+                display: flex;
+                flex-direction: column;                
+                gap: 25px;
+                width: calc(100vw);                            
+                position: absolute;                
+                 /*Top bar height + space between topbar and first content block)*/
+                height: calc(100vh); /*vh - padding top */ 
+                overflow-x: hidden;
+                overflow-y: scroll;
+                align-items: center;
+                
+
+            }
+            .BottomBar{
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .InfoPrice{
+                width: 100vw;
+            }
+            .Credits{
+                width: 100vw;
+            }
+            .CreditLine{
+                align-self: center;
+            }
+            .Contact{
+                height: auto;
+            }
+            .Line{
+                gap: 0px;
+                width: calc(50vw - 20px);
+            }
+        }
+        
+                
+        
+       
+        @media only screen and (min-width: 860px){  
+            .Hero.Image{
+                animation: ZoomOut 4s ease-in-out;
+                animation-fill-mode: forwards;
+                background-size: 100vw;
+            }
+            .Hero.Title{
+                font-size: 2.5rem;
+                font-weight: 400;
+                color: rgb(46, 46, 46);
+                letter-spacing: -1px;
+                text-align: center;
+                animation: Text 4s ease-out;
+                top: -100px;
+                line-height: 36px;
+            }
+            .Hero.Text{
+                text-align: center;
+                animation: Body 4s ease-out;
+                top: -100px;
+                
+            }
+            @keyframes ZoomOut {
+                0%{
+                    background-size: 100vw;
+                }
+                
+                100% {
+                    background-size: 140vw;
+                }
+            }
+            @keyframes Text {
+                0% {
+                    opacity: 0;
+                    top: 10vh;
+                    position: relative;
+                }
+                50% {
+                    opacity: 0;
+                    top: 10vh;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    
+                    position: relative;
+                }
+                
+            }
+            @keyframes Body {
+                0% {
+                    opacity: 0;
+                    top: 10vh;
+                    position: relative;
+                }
+                76.1904762% {
+                    opacity: 0;
+                    top: 5vh;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    
+                    position: relative;
+                }
+                
+            }
+            /*////////////////////////////////*/
+            .Block{
+                display: flex;
+                height: fit-content;
+                background-color: rgba(255, 255, 255, 0.7);
+                
+                
+                
+                width: calc(100vw - 60px - 25px - 25px); /*right space + internal padding*/
+                
+                
+                align-items: flex-start;   
+                          
+            }
+            .Block:hover {
+                background-color: rgba(255, 255, 255, 0.3)  !important ;
+                
+                
+            }
+            .Background.Image{
+                
+
+            }
+            .Block.Left {
+                flex-direction: row-reverse;
+            }
+            .Block.Right{
+                
+            }
+            .Background.Image:hover{
+                box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.3); 
+                
+                background-size: 100vw;
+            }
+            .Background.Image:hover .Description.Rinjani{
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            .Background.Image:hover .Description.SoftTrek{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            .Background.Image:hover .Description.Surroundings{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            .Background.Image:hover .Description.AboutSection{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            .Left.Background.Image{
+                left: 0px;
+                position: relative;
+                padding-left: 25px;
+            }
+            .Right.Background.Image{
+                left: 85px;
+                position: relative;
+                padding-right: 25px;
+            }
+            
+            .Description{                
+                width: calc(55vw - 60px - 50px - 25px); /*right-space + description padding + image padding*/
+                
+                position: relative;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                align-self: flex-start;
+                background-color: rgba(255, 255, 255, 0.7); 
+                z-index: 2;
+                padding: 25px;
+                min-height: calc(30vw - 50px);
+                transition: 1s;
+                
+            }
+            .BottomBar{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            body{
+                background-size: 1500px;
+                background-position: 0px -300px;
+                background-repeat: no-repeat;
+                margin: 0px;
+            }
+            .TopBar{
+                display: flex;
+                flex-wrap: wrap;  
+                justify-content: space-evenly;
+                align-items: center;                
+            }
+            .MobileTopBarMenuButton{
+                display: none;
+            }
+            .TopBarButtonContainer{
+                display: flex;
+                width: auto;
+                
+                align-items: center;
+                height: 60px;
+
+            }
+            .TopBarButton {
+                
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                justify-content: center;
+                font-size: 1.125rem;
+                font-family: 'Source Sans 3'; 
+                font-weight: 400; 
+                transition: 0.5s;
+                border-radius: 8px;
+                height: 50px;
+                padding: 0px 20px;
+
+            }
+            
+            /*.BackgroundShade {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.7);
+            
+            }*/
+            .MainContent{
+                display: flex;
+                flex-direction: column;                
+                gap: 25px;
+                width: calc(100vw);                            
+                position: absolute;                
+                padding-top: calc(60px + 25px); /*Top bar height + space between topbar and first content block)*/
+                height: calc(100vh); /*vh - padding top */ 
+                overflow-x: hidden;
+                overflow-y: scroll;
+                
+
+            }
+            .Mobile.Title{
+                display: none;
+            }
+            
+            .Rectangle1{
+                width: 45vw;
+                height: 30vw ;
+                object-fit: cover;
+                scroll-snap-align: center;
+                border-radius: 5px ;
+                
+                position: relative;
+            }
+            .Left>.Rectangle1{
+                border-radius: 0px 5px 5px 0px;
+            }
+            .Left>.Description{
+                border-radius: 5px 0px 0px 5px;
+            }
+            .Right>.Rectangle1{
+                border-radius: 5px 0px 0px 5px;
+            }
+            .Right>.Description{
+                border-radius: 0px 5px 5px 0px;
+            }
+           
+            
+            .Title{
+                font-family: "Source Sans 3";
+                font-size: 1.75rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;            
+                
+            }
+            .StraightLine{
+                display: none;
+            }
+            
+        }
+        
+        ::-webkit-scrollbar{
+                opacity: 0;
+                width: 0px;
+                height: 0px;
+            }   
+        .Arrow{
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            position: relative;
+            top: 5px;  
+            width: 10px;
+            height: 10px;
+
+
+        }    
+        .Down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        a{
+            text-decoration: none;
+            color: #222222;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="BackgroundShade">  
+        <div class="TopBar" tabindex="0">
+                <div class="Logo">
+                    
+                    
+                </div>
+                <div class="MobileTopBarMenuButton" >
+                    <div class="MobileTopBarMenuButtonText" tabindex="1">EXPLORE</div>
+                    <div class="Down Arrow"></div>
+                </div>
+                <div class="TopBarButtonContainer">
+                    <div class="TopBarButton">                        
+                        <a class="TetebatuSoftTrek" style=" color: #222222; " href="folder1/SoftTrek.html">TETEBATU SOFT TREK</a>
+                    </div>
+                    <div class="TopBarButton">                        
+                        <a class="RinjaniTrek" style="text-align: center; color: #222222;" href="folder1/RinjaniTrek.html">RINJANI TREK</a>
+                    </div>
+                    <div class="TopBarButton">                    
+                        <a class="ExploreTheSurroundings" style="color: #222222;" href="folder1/ExploreTheSurroundings.html">EXPLORE THE SURROUNDINGS</a>
+                    </div>
+                    <div class="TopBarButton" >                        
+                        <a class="AboutYusuf" style="text-align: center; color: #222222;" href="folder1/AboutSection.html">ABOUT YUSUF</a>
+                    </div>
+                </div>
+        </div>
+        <div class="MainContent">
+            <div class="Hero Content">
+                <div class="Hero Image">
+                    <div class="Hero Title">
+                        YUSUF <br> TETEBATU TOUR GUIDE
+                    </div>
+                    <div class="Hero Text">
+                        Discover the beauty of Lombok
+                    </div>
+                </div>
+            </div>
+            <div class="Spacer"></div>
+            <div class="Activities"><div class="Discover">DISCOVER WITH YUSUF</div></div>
+            <a class="Background Image Rinjani Left" href="folder1/RinjaniTrek.html">
+                <div class="Rinjani Block Left">
+                    <img class="Rectangle1" src="Images Rinjani/RinjaniTende1.jpg">
+                    <div class="ImageContainer Rinjani">
+                        <div class="Mobile Title">RINJANI TREK</div>
+                    </div>
+                    <div class="Description Rinjani">
+                        <div class="Desktop Title">RINJANI TREK</div>
+                        <div class="Body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. Nullam at orci commodo libero blandit consequat. Donec a blandit justo. Proin efficitur, libero sed faucibus mattis, enim lectus pretium sapien, tristique venenatis elit ex vel ante. Vivamus consequat ac augue hendrerit pellentesque. Duis ac lectus vitae risus aliquet ultrices quis ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            </div>
+                    </div>
+                </div>    
+            </a>
+            <a class="Background Image SoftTrek Right" href="folder1/SoftTrek.html">
+                <div class="SoftTrek Block Right">
+                    <img class="Rectangle1" src="Images SoftTrek/TetebatuBlackMonkey2.jpg">
+                    <div class="ImageContainer SoftTrek">
+                        <div class="Mobile Title">TETEBATU SOFT TREK</div>
+                    </div>
+                    <div class="Description SoftTrek">
+                        <div class="Desktop Title">TETEBATU SOFT TREK</div>
+                        <div class="Body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. Nullam at orci commodo libero blandit consequat. Donec a blandit justo. Proin efficitur, libero sed faucibus mattis, enim lectus pretium sapien, tristique venenatis elit ex vel ante. Vivamus consequat ac augue hendrerit pellentesque. Duis ac lectus vitae risus aliquet ultrices quis ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            </div>
+                    </div>
+                </div>    
+            </a>
+            <a class="Background Image Surroundings Left" href="folder1/ExploreTheSurroundings.html">
+                <div class="Surroundings Block Left">
+                    <img class="Rectangle1" src="Images Surroundings/SurroundingsPottery.jpg">
+                    <div class="ImageContainer Surroundings">
+                        <div class="Mobile Title">EXPLORE THE SURROUNDINGS</div>
+                    </div>
+                    <div class="Description Surroundings">
+                        <div class="Desktop Title">EXPLORE THE SURROUNDINGS</div>
+                        <div class="Body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. Nullam at orci commodo libero blandit consequat. Donec a blandit justo. Proin efficitur, libero sed faucibus mattis, enim lectus pretium sapien, tristique venenatis elit ex vel ante. Vivamus consequat ac augue hendrerit pellentesque. Duis ac lectus vitae risus aliquet ultrices quis ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            </div>
+                    </div>
+                </div>    
+            </a>
+            <a class="Background Image AboutSection Right" href="folder1/AboutSection.html">
+                <div class="AboutSection Block Right">
+                    <img class="Rectangle1" src="AboutSchiena.jpg">
+                    <div class="ImageContainer About">
+                        <div class="Mobile Title">ABOUT YUSUF</div>
+                    </div>
+                    <div class="Description AboutSection">
+                        <div class="Desktop Title">ABOUT YUSUF</div>
+                        <div class="Body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. Nullam at orci commodo libero blandit consequat. Donec a blandit justo. Proin efficitur, libero sed faucibus mattis, enim lectus pretium sapien, tristique venenatis elit ex vel ante. Vivamus consequat ac augue hendrerit pellentesque. Duis ac lectus vitae risus aliquet ultrices quis ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            </div>
+                    </div>
+                </div>    
+            </a>
+            <div class="BottomBar">
+                <div class="Logo"></div>
+                <div class="InfoPrice">
+                    <div class="ContactsHeader">CONTACTS</div>
+                    <div class="Contact Tag">Whatsapp Number: <span class="BoldText">3391234567</span></div>
+                    <div class="Contact Tag">Mail contact:<span class="BoldText">maildiyusuf@gmail.com</span></div>                        
+                </div>
+                <div class="StraightLine"></div>
+                <div class="Credits">
+                    <div class="CreditTitle">CREDITS</div>
+                    <div class="CreditLine">TitleTitleTitle of AuthorAuthor. License link</div>
+                    <div class="CreditLine">hjhjhjhjhjh</div>
+                    <div class="CreditLine">hjhjhjhjhjh</div>
+                    <div class="CreditLine">hjhjhjhjhjh</div>
+                </div>
+            </div>
+        </div>    
+           
+    </div>
+</body>
+</html>

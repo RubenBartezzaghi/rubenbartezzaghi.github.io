@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+            
+            a{
+            text-decoration: none;
+            color: #222222;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url("../YusufSilk.JPG");
+                background-position: center;
+            }
+            .BackgroundShade {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0);
+            
+            }
+            .TopBar{
+                background-color:rgba(255, 255, 255, 0.8);
+            }
+            .Logo{
+                width: 60px;
+                height: 60px;
+                background-image: url(../LogoQuadrato1.png);
+            }            
+            
+            .DescriptionRinjaniTrek>*{
+                border-radius: 5px;
+            }
+            
+            .Spacer{
+                padding-left: 150px;
+                padding-right: 150px;
+                opacity: 0;
+                background-color: #222222;
+            }
+            .Body{
+                color: #000;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            .InfoPrice{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.8);
+                width: 100%;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                gap: 10px;
+
+                
+            }
+            .InfoHeader{
+                color: #000;
+                text-align: center;
+                font-family: "Source Sans 3";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+            .Days{
+                display: flex;
+                font-family: "Source Sans 3";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                gap: 25px;
+                justify-content: flex-start;
+                width: 100%;
+                padding-left: 15px;
+                
+            }
+            .Price{
+                font-family: "Source Sans 3";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+            }
+            .Text{
+                /*text-align: center;*/
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 400;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .Contact{
+                overflow-wrap: anywhere;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+            }
+            .BoldText{
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 500;
+                display: inline;
+            }
+            .ContactsHeader{
+                font-family: "Source Sans 3";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .TopBarButton:active {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+            }
+            .Credit.Tag{
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                overflow-wrap: normal;
+            }
+            .LicenseCredit{
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 300;
+                align-items: center;
+            }
+            
+            @media only screen and (max-width: 859px){
+            /*ANIMATIONS*/
+            @keyframes Photos {
+                0% {
+                    opacity: 0;
+                    left: 100vw;
+                    position: relative;
+                }
+                50% {
+                    opacity: 0;
+                    left: 100vw;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    left: 0;
+                    position: relative;
+                }
+                
+            }
+            @keyframes Title {
+                0% {
+                    opacity: 0;
+                    left: 100vw;
+                    position: relative;
+                }
+                
+                100% {
+                    opacity: 1;
+                    left: 0;
+                    position: relative;
+                }
+                
+            }
+            
+            @keyframes Text {
+                0% {
+                    opacity: 0;
+                    right: 100vw;
+                    position: relative;
+                }
+                66.6666666% {
+                    opacity: 0;
+                    right: 100vw;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    right: 0;
+                    position: relative;
+                }
+                
+            }
+            @keyframes SlideIn {
+                0% { 
+                    opacity: 0;
+                    left: 50vw;
+                    position: relative;
+                }
+                25%{
+                    opacity: 0;
+                    left: 50vw;
+                    position: relative;
+                }
+                
+                100% {
+                    opacity: 1;
+                    left: 0px;
+                    position: relative;
+                }
+            }
+            @keyframes Hide {
+               0%{ 
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+
+            .Body{
+                animation: SlideIn 2s ease-out;
+                animation-delay: 1.5s;
+                opacity: 0;
+                animation-fill-mode: forwards;
+                
+            }
+            .Frame2{
+                animation: SlideIn 2s ease-out;
+                animation-delay: 1s;
+                opacity: 0;
+                animation-fill-mode: forwards;
+                
+            }
+            .Title{    
+                animation: SlideIn 2s ease-out;
+                animation-delay: 0s;
+                
+            }
+            
+            
+            
+            /*END OF ANIMATIONS SECTION*/
+            body{
+                background-size: cover;
+                background-repeat: no-repeat;  
+                width: 100vw;
+                height: 100vh;
+            }
+            .TopBar{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100vw;
+                position: fixed;
+                height: 60px;
+                row-gap: 20px;     
+                z-index: 3; 
+                transition: 1s;
+            }
+            .Logo{
+                left: 30px;
+                top: 0px;
+                position: fixed;
+            }
+            .TopBarButtonContainer{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: absolute;
+                top: -250px;
+                justify-content: space-around;
+                transition: 1s;
+            }
+            .MobileTopBarMenuButton{
+                pointer-events:none;
+                
+                position: fixed;
+                /*width: 100vw;*/
+                display: flex;
+                justify-content: center;
+                transition: 0.3s;
+                gap: 15px;
+                color: #222222;
+            }
+            .MobileTopBarMenuButtonText{
+                font-size: 20px;
+                font-family: 'Source Sans 3';
+                font-weight: 400;
+            }
+            .TopBar:focus-within .TopBarButtonContainer{
+                top: 21px;
+                display: flex;
+                position: absolute;
+            }
+            .TopBar:focus-within .MobileTopBarMenuButton{
+                opacity: 0;
+                position: absolute;
+               
+            }
+            .TopBar:focus-within {
+                height: 200px;
+                background-color:rgba(255, 255, 255, 0.9);
+            }
+            .TopBarButton {
+                width: 200px;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                justify-content: center;
+                font-size: 18px;
+                font-family: 'Source Sans 3'; 
+                font-weight: 400;        
+                z-index: 4;  
+            }
+            
+            .MainContent {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                top: 60px;
+                height: calc(100vh - 90px);
+                overflow-y: scroll;
+                overflow-x: hidden;
+                gap: 25px;
+                opacity: 1;
+                padding-top: 25px;
+            }
+            
+            
+            
+            .Frame2{
+                display: flex;
+                
+                position: relative;
+                
+                
+                /*flex-direction: column;*/
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 20px; 
+                overflow-y: hidden;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                width: calc(100vw);
+                z-index: 2;
+            }
+            
+
+            .Rectangle1{
+                width: 80vw;
+                height: 80vw ;
+                object-fit: cover;
+                scroll-snap-align: center;
+
+            }
+            ::-webkit-scrollbar {
+                width: 0px;
+                height: 0px;
+                background-color: #aaa; /* or add it to the track */
+            }
+            
+
+            
+            .DescriptionRinjaniTrek{
+                /*top: 75px;*/
+                left: 5px;
+                width: calc(100vw - 60px);
+                height: 0px;
+                
+                position: relative;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 25px;
+                
+                /*overflow-y: scroll;
+                overflow-x: hidden;*/
+                z-index: 2;
+                
+                
+            }
+            .Title{
+                font-family: "Source Sans 3";
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal; 
+                justify-content: center;
+                display: flex;  
+                align-items: center;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.8);
+                width: 200vw;
+            }
+            
+            
+            .Title.Rinjani{
+                display: none;
+            }
+            .Contact{
+                flex-direction: column;
+            }
+            .BoldText{
+                text-align: center;
+            }
+            
+            
+            
+        }
+                
+        @media only screen and (min-width: 495px){
+
+        .Rectangle1 {
+            width: 395px;
+            height: 395px;
+        }
+        }     
+        @media only screen and (min-width: 860px){  
+            /*ANIMATIONS*/
+            @keyframes Text {
+                0% { 
+                    opacity: 0;
+                    left: 50vw;
+                    position: relative;
+                }
+                25%{
+                    opacity: 0;
+                    left: 50vw;
+                    position: relative;
+                }
+                
+                100% {
+                    opacity: 1;
+                    left: 0px;
+                    position: relative;
+                }
+                
+            }
+            @keyframes Hide {
+                0%{
+                    opacity: 0;
+                }
+                75%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+            @keyframes Photos {
+                0% {
+                    opacity: 0;
+                    left: 100vw;
+                    position: relative;
+                }
+                100% {
+                    opacity: 1;
+                    left: 0;
+                    position: relative;
+                }
+                
+            }
+            @keyframes SlideIn {
+                0% { 
+                    opacity: 0;
+                    right: 50vw;
+                    position: relative;
+                }
+                25%{
+                    opacity: 0;
+                    right: 50vw;
+                    position: relative;
+                }
+                
+                100% {
+                    opacity: 1;
+                    right: 0px;
+                    position: relative;
+                }
+            }
+            .DescriptionRinjaniTrek{
+                animation: Text 2s ease-out;
+            }
+            .Rectangle1{
+                animation: SlideIn 2s ease-out;
+            }
+            .Frame2{
+                animation: Hide 2s;
+            }
+            /*END OF ANIMATIONS SECTION*/
+
+            body{
+                
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0px;
+                height: 100vh;
+                width: 100vw;
+            }
+            .TopBar{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                width: 100vw;
+                position: fixed;
+                row-gap: 20px;
+                z-index: 3;
+            }
+            .MobileTopBarMenuButton{
+                display: none;
+            }
+            .TopBarButtonContainer{
+                display: flex;
+                width: auto;
+                
+                align-items: center;
+                height: 60px;
+
+            }
+            .TopBarButton {
+                
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                justify-content: center;
+                font-size: 18px;
+                font-family: 'Source Sans 3'; 
+                font-weight: 400; 
+                padding: 0px 20px; 
+                height: 50px;
+                border-radius: 8px; 
+            }
+            .MainContent{
+                display: flex;
+                justify-content: space-between;
+                width: 100vw;                
+                position: absolute;
+                padding-left: 30px;
+                padding-right: 30px;
+
+            }
+            .Mobile.Title{
+                display: none;
+            }
+            .Frame2>*{
+                border-radius: 5px;
+            }
+            .Frame2{
+                display: flex;
+                position: relative;
+                padding: 85px 0px 0px 0px;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 25px; 
+                overflow-y: scroll;
+                overflow-x: hidden;
+                scroll-snap-type: y mandatory;
+                height: calc(100vh - 15px - 85px);
+                width: fit-content;
+                z-index: 2;
+                /*animation: Photos 3s ease-out;*/
+            }
+            .Rectangle1{
+                width: 45vw;
+                height: 30vw ;
+                object-fit: contain;
+                scroll-snap-align: center;
+                
+            }
+           
+            .DescriptionRinjaniTrek{
+                top: 60px;
+                
+                width: 57vw;
+                height: calc(100vh - 90px);
+                padding: 15px 50px 0px 25px;
+                position: relative;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 25px;
+                
+                overflow-y: scroll;
+                overflow-x: hidden;
+                z-index: 2;
+                
+                
+            }
+            .Title{
+                font-family: "Source Sans 3";
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal; 
+                text-align: center; 
+                padding: 10px; 
+                background-color:rgba(255, 255, 255, 0.8);
+            }
+                
+            
+            .Mobile.Body{
+                display: none;
+            }
+            .Body{
+                background-color: rgba(0, 0, 0, 0);
+            }
+            /*.Body{
+                color: #000;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            .InfoPrice{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.5);
+                width: 100%;
+                padding: 25px;
+                gap: 25px;
+                
+            }
+            .InfoHeader{
+                color: #000;
+                text-align: center;
+                font-family: "Source Sans 3";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+            .Days{
+                display: flex;
+                font-family: "Source Sans 3";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                gap: 25px;
+                justify-content: flex-start;
+                width: 100%;
+                
+            }
+            .Price{
+                font-family: "Source Sans 3";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+            }
+            .Text{
+                /*text-align: center;
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .ContactLine{
+                display: flex;
+                gap: 50px;
+                
+            }
+            .Line{
+                display: flex;
+                gap: 25px;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .First.Line{
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 300;
+            }
+            .Second.Line{
+                align-items: flex-start;
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .ContactsHeader{
+                font-family: "Source Sans 3";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+            }*/
+        }
+        
+        ::-webkit-scrollbar{
+                opacity: 0;
+                width: 0px;
+                height: 0px;
+            }   
+        .Arrow{
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            position: relative;
+            top: 5px;  
+            width: 10px;
+            height: 10px;
+
+
+        }    
+        .Down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="BackgroundShade">  
+        <div class="TopBar" tabindex="0">
+                <a class="Logo" href="../index.html">
+                        
+                        
+                </a>
+                <div class="MobileTopBarMenuButton" >
+                    <div class="MobileTopBarMenuButtonText" tabindex="1">EXPLORE</div>
+                    <div class="Down Arrow"></div>
+                </div>
+                <div class="MobileTopBarMenuButton" >
+                    <div class="MobileTopBarMenuButtonText" tabindex="1">EXPLORE</div>
+                    <div class="Down Arrow"></div>
+                </div>
+                <div class="TopBarButtonContainer">
+                    <div class="TopBarButton">                        
+                        <a class="TetebatuSoftTrek" style=" color: #222222; " href="SoftTrek.html">TETEBATU SOFT TREK</a>
+                    </div>
+                    <div class="TopBarButton">                        
+                        <a class="RinjaniTrek" style="text-align: center; color: #222222; " href="RinjaniTrek.html">RINJANI TREK</a>
+                    </div>
+                    <div class="TopBarButton">                    
+                        <a class="ExploreTheSurroundings" style="color: #222222;" href="ExploreTheSurroundings.html">EXPLORE THE SURROUNDINGS</a>
+                    </div>
+                    <div class="TopBarButton" >                        
+                        <a class="AboutYusuf" style="text-align: center; color: #222222" href="AboutSection.html">ABOUT YUSUF</a>
+                    </div>
+                </div>
+        </div>
+        <div class="MainContent">
+            <div class="Mobile Title">ABOUT YUSUF</div>           
+            <div class="Frame2" >
+                <div class="Spacer"></div>
+                <img class="Rectangle1"  src="../AboutSchiena.jpg" style="animation-delay: 1s;"/>
+                <img class="Rectangle1"  src="../AboutDrean.jpg" style="animation-delay: 1.5s;"/>
+                <img class="Rectangle1"  src="../RinjaniSunset1.jpg" />
+                <img class="Rectangle1"  src="../RinjaniTende1.jpg" />
+                <img class="Rectangle1"  src="../Rinjani1.jpg" />
+                <div class="Spacer"></div>
+            </div> 
+            <div class="DescriptionRinjaniTrek"  style="animation-delay: 0s;">
+                <div class="Title Rinjani">ABOUT YUSUF 
+                    <div class="Desktop Body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. Nullam at orci commodo libero blandit consequat. Donec a blandit justo. Proin efficitur, libero sed faucibus mattis, enim lectus pretium sapien, tristique venenatis elit ex vel ante. Vivamus consequat ac augue hendrerit pellentesque. Duis ac lectus vitae risus aliquet ultrices quis ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Integer est urna, lacinia sit amet libero vehicula, consectetur vehicula lorem. Sed lacinia sem ut volutpat vehicula. 
+                    Pellentesque ullamcorper tristique pharetra. Nulla volutpat vel dui quis ornare. Phasellus sagittis ipsum eget erat 
+                    volutpat, sed condimentum nunc pretium. Proin tempor tempor dolor interdum efficitur. Sed mauris eros, pretium quis 
+                    faucibus in, tincidunt in mauris. Quisque hendrerit tortor nec orci malesuada sollicitudin. Mauris aliquam, urna ac
+                     ornare rutrum, leo dolor blandit dolor, ut pharetra ante nibh dignissim leo. Cras vitae enim ac felis vulputate 
+                     faucibus sit amet fringilla velit. Nunc in orci odio. Duis sem leo, consequat sed dictum ac, facilisis nec tortor.
+                    </div>
+                </div>
+                <div class="Mobile Body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. Nullam at orci commodo libero blandit consequat. Donec a blandit justo. Proin efficitur, libero sed faucibus mattis, enim lectus pretium sapien, tristique venenatis elit ex vel ante. Vivamus consequat ac augue hendrerit pellentesque. Duis ac lectus vitae risus aliquet ultrices quis ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Integer est urna, lacinia sit amet libero vehicula, consectetur vehicula lorem. Sed lacinia sem ut volutpat vehicula. 
+                    Pellentesque ullamcorper tristique pharetra. Nulla volutpat vel dui quis ornare. Phasellus sagittis ipsum eget erat 
+                    volutpat, sed condimentum nunc pretium. Proin tempor tempor dolor interdum efficitur. Sed mauris eros, pretium quis 
+                    faucibus in, tincidunt in mauris. Quisque hendrerit tortor nec orci malesuada sollicitudin. Mauris aliquam, urna ac
+                     ornare rutrum, leo dolor blandit dolor, ut pharetra ante nibh dignissim leo. Cras vitae enim ac felis vulputate 
+                     faucibus sit amet fringilla velit. Nunc in orci odio. Duis sem leo, consequat sed dictum ac, facilisis nec tortor.
+                </div>
+                <div class="InfoPrice Description">
+                  <div class="InfoHeader">INFORMATIONS AND PRICES</div>
+                  <div class="Block">
+                    <div class="Two Days">
+                        <div>-2 Days/1 Night:</div>
+                        <div class="Price">2.000.000 Rp</div>
+                    </div>                    
+                    <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. 
+                        Nullam at orci commodo libero blandit consequat. Donec a blandit justo
+                    </div>
+                  </div>
+                  <div class="Block">
+                    <div class="Three Days">
+                        <div>-3 Days/2 Night:</div>
+                        <div class="Price">3.000.000 Rp</div>
+                    </div>
+                    <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a diam fringilla, malesuada nunc ut, posuere urna. Curabitur convallis dolor vitae porttitor fringilla. Quisque in sem purus. 
+                        Nullam at orci commodo libero blandit consequat. Donec a blandit justo
+                    </div>
+                  </div>   
+                </div>
+                <div class="InfoPrice Contacts">
+                    <div class="ContactsHeader">CONTACTS</div>
+                    <div class="Contact Tag">Whatsapp Number: <span class="BoldText">3391234567</span></div>
+                    <div class="Contact Tag">Mail contact:<span class="BoldText">maildiyusuf@gmail.com</span></div>  
+                    <div class="ContactsHeader">Credits
+                        <span class="Credit Tag">Photo Title, by &nbsp<span class="BoldText">Author</span>,&nbsp</span>
+                        <a class="LicenseCredit" href="placeholder.url">license name</a>
+                        <span class="Credit Tag">Photo Title, by &nbsp<span class="BoldText">Author</span>,&nbsp</span>
+                        <a class="LicenseCredit" href="placeholder.url">license name</a>
+                        <span class="Credit Tag">Photo Title, by &nbsp<span class="BoldText">Author</span>,&nbsp</span>
+                        <a class="LicenseCredit" href="placeholder.url">license name</a>
+                        <span class="Credit Tag">Photo Title, by &nbsp<span class="BoldText">Author</span>,&nbsp</span>
+                        <a class="LicenseCredit" href="placeholder.url">license name</a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+           
+    </div>
+</body>
+</html>
